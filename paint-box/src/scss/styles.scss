@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Playball&display=swap");
+@import "_variables";
+@import "_titles";
+
+* {
+  box-sizing: border-box;
+}
+body > *:not(footer) {
+  color: $black;
+  padding: 0 $sideSpace;
+}
+h4,
+a {
+  @extend %miniTitle;
+}
+.button {
+  display: inline-block;
+  border: 1px solid $black;
+  color: $black;
+  transition: background-color 0.3s, color 0.3s;
+  height: 55px;
+  line-height: 55px;
+  letter-spacing: 2.2px;
+  max-width: 100%;
+  min-width: 240px;
+  padding: 0 50px;
+  text-decoration: none;
+  text-align: center;
+}
+.button:hover {
+  background-color: $black;
+  color: #fff;
+}
+strong {
+  font-style: italic;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  height: 155px;
+  z-index: 1;
+  @extend %miniTitle;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    ul {
+      display: flex;
+      li {
+        display: block;
+        line-height: 155px;
+        margin-right: 40px;
+        cursor: pointer;
+        i {
+          font-size: 16px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        &:nth-child(2) {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-image: url(../../images/logo.PNG);
+    background-size: contain;
+    cursor: pointer;
+  }
+}
+.hero {
+  display: flex;
+  margin: 195px 0 40px 0;
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    overflow: hidden;
+  }
+  .hero__img img {
+    width: 100%;
+  }
+  .hero__half {
+    @extend %descript;
+    background-color: #f9dbbe;
+    p {
+      display: block;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: "Cormorant Garamond", serif;
+    }
+  }
+}
+section {
+  display: flex;
+  max-width: 1920px;
+  > div {
+    @extend %descript;
+    width: 50%;
+    overflow: hidden;
+    padding: 40px 0;
+    p {
+      display: block;
+      text-align: center;
+      margin-bottom: 60px;
+      font-family: "Cormorant Garamond", serif;
+    }
+    &:first-child {
+      margin-bottom: 0;
+    }
+  }
+  .book__half,
+  .gift-card__half,
+  .journal__half,
+  .instagram__half {
+    padding: 0 $sideSpace;
+    margin: 40px 0;
+    background-color: #f3ede8;
+  }
+}
+.shop {
+  font-family: "Cormorant Garamond", serif;
+  h4 {
+    display: block;
+    margin-bottom: 17px;
+  }
+  .product {
+    width: 100%;
+    .product__title {
+      display: block;
+    }
+    .product__wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      .product__set {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div {
+          text-align: center;
+        }
+        span {
+          display: inline-block;
+        }
+        span:nth-child(2) {
+          border-left: 1px solid rgba(0, 0, 0, 0.1);
+          padding-left: 10px;
+          margin-left: 8px;
+          line-height: 0.9em;
+          color: #cfa101;
+        }
+        .product__name {
+          margin-top: 10px;
+          strong {
+            font-family: "Playball", cursive;
+            font-style: normal;
+            text-transform: none;
+            font-weight: lighter;
+            font-size: 26px;
+          }
+          span {
+            display: inline-block;
+            font-weight: 300;
+            font-family: serif;
+            opacity: 0.6;
+            margin-left: 4px;
+          }
+        }
+        .product__price {
+          opacity: 0.6;
+        }
+        .button {
+          margin-top: 30px;
+        }
+      }
+      .product__title__image {
+        transform: scale(1.3);
+        margin: 60px 0 30px 0;
+      }
+    }
+  }
+}
+.gift-card {
+  .gift-card__half {
+    background-color: #dee8e9;
+    p {
+      margin-top: 10px;
+    }
+  }
+}
+.inspiration {
+  display: block;
+  .product {
+    width: 100%;
+    .product__title {
+      margin-top: 20px;
+      font-family: "Playball", cursive;
+      font-weight: 300;
+      span:first-child {
+        font-family: "Cormorant Garamond";
+        font-weight: 700;
+        font-size: 1.1em;
+      }
+      span > span {
+        font-family: serif;
+        opacity: 0.8;
+      }
+    }
+    .product__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .button {
+        margin-top: 60px;
+      }
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 180px;
+      overflow: hidden;
+      margin-top: 60px;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        margin-bottom: 50px;
+        img {
+          transform: scale(0.5);
+        }
+        span {
+          display: block;
+          margin-top: -50px;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+.journal {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(3, auto);
+  margin-top: 50px;
+  a {
+    overflow: hidden;
+    text-transform: none;
+    .journal__img {
+      img {
+        width: 120%;
+        margin-bottom: -2px;
+      }
+    }
+    .journal__half {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .journal__title {
+        margin: 60px 0;
+        font-size: 26px;
+        font-family: "Cormorant Garamond";
+        font-weight: 600;
+      }
+    }
+    &:nth-child(4) {
+      img {
+        padding-right: 20%;
+      }
+    }
+  }
+}
+.join {
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  div {
+    width: 45%;
+    padding: 10px 0;
+    font-size: 42px;
+    line-height: 1.2em;
+  }
+  .join__form {
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      padding-bottom: 15px;
+      input {
+        border: none;
+        font-size: 36px;
+        font-family: "Cormorant Garamond";
+        width: 80%;
+        &:focus {
+          outline: none;
+        }
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 45px;
+        height: 45px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        i {
+          margin: 0 0 2px 2px;
+        }
+      }
+    }
+  }
+}
+.instagram {
+  margin-top: 30px;
+  .instagram__image {
+    img {
+      width: 100%;
+    }
+  }
+  .instagram__half {
+    padding: 0 170px;
+    background-color: #f9dbbe;
+    .instagram__description {
+      margin-top: 20px;
+    }
+  }
+}
+.posting {
+  flex-direction: column;
+  margin-top: 40px;
+  ul {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(4, 25%);
+    li {
+      overflow: hidden;
+      &:nth-child(n + 5) {
+        margin-top: -2px;
+      }
+      img {
+        width: 100%;
+        transition: all 0.3s;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .account {
+    font-family: "Cormorant Garamond";
+    font-size: 40px;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 50px;
+    span {
+      margin: 0 10px;
+    }
+    strong {
+      font-style: normal;
+      opacity: 0.7;
+    }
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Montserrat";
+  background-color: #f3ede8;
+  font-size: 10px;
+  letter-spacing: 2.2px;
+  padding: 65px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  h4 {
+    opacity: 0.6;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0, 0, 0, 0.8);
+    width: 33.3%;
+    margin: 0;
+    padding: 0;
+    &:last-child {
+      border: none;
+    }
+    ul {
+      margin-top: 30px;
+      li {
+        padding: 7px 0;
+        font-weight: 600;
+        color: #000;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
